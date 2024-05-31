@@ -1,0 +1,7 @@
+{
+  "name": "taste-express",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
