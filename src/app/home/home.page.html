@@ -1,0 +1,62 @@
+<ion-content [fullscreen]="true">
+  <div class="header">
+    <h2>Your current location</h2>
+    <p>within 2 km</p>
+  </div>
+
+  <ion-searchbar placeholder="Search"></ion-searchbar>
+
+  <div class="section-title">
+    <h2>Recommended for you</h2>
+  </div>
+
+  <ion-slides pager="true" [options]="slideOpts">
+    <ion-slide *ngFor="let item of recommendedItems">
+      <ion-card (click)="navigateTo(item.link)">
+        <img [src]="item.image" />
+        <ion-card-header>
+          <ion-card-title>{{ item.title }}</ion-card-title>
+          <ion-card-subtitle>{{ item.subtitle }}</ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          Collect today: {{ item.collectTime }} <br />
+          <strong>{{ item.price }}</strong>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+
+  <div class="section-title">
+    <h2>Collect now</h2>
+  </div>
+
+  <ion-list>
+    <ion-item
+      *ngFor="let item of collectNowItems"
+      (click)="navigateTo(item.link)"
+    >
+      <ion-thumbnail slot="start">
+        <img [src]="item.image" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ item.title }}</h2>
+        <p>{{ item.subtitle }}</p>
+        <p>Collect today: {{ item.collectTime }}</p>
+        <p><strong>{{ item.price }}</strong></p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button routerLink="/discover">Discover</ion-button>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/map">Map</ion-button>
+      <ion-button routerLink="/favourites">Favourites</ion-button>
+      <ion-button routerLink="/profile">Profile</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

@@ -1,0 +1,24 @@
+.header {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.section-title {
+  margin: 20px 0 10px 0;
+  padding: 0 15px;
+}
+
+ion-slides {
+  height: 220px;
+}
+
+ion-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+ion-footer ion-toolbar {
+  justify-content: space-between;
+}

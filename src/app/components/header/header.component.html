@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <div class="header-content">
+        <div class="header-text">Taste Express</div>
+        <ion-buttons slot="end">
+          <ng-container
+            ng-container
+            *ngIf="auth.user | async as user; else loginButton"
+          >
+            <p class="welcome-message">Welcome, {{ user.displayName }}!</p>
+            <ion-button (click)="logout()" class="logout-button"
+              >LOGOUT</ion-button
+            >
+          </ng-container>
+          <ng-template #loginButton>
+            <ion-button (click)="login()" class="login-button"
+              >LOGIN</ion-button
+            >
+          </ng-template>
+        </ion-buttons>
+      </div>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>

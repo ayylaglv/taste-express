@@ -1,0 +1,19 @@
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.header-text {
+  flex: 1;
+}
+
+.auth-section {
+  display: flex;
+  align-items: center;
+}
+
+.welcome-message {
+  margin-right: 10px;
+}

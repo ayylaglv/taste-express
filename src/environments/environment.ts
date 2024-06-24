@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  firebase: {
+    apiKey: 'AIzaSyDblrr1AMDtwFhDcRFPYvBk2v-5H3uUrOI',
+    authDomain: 'taste-express-41513.firebaseapp.com',
+    projectId: 'taste-express-41513',
+    storageBucket: 'taste-express-41513.appspot.com',
+    messagingSenderId: '500275267103',
+    appId: '1:500275267103:web:c5354a0e957388a438772a',
+    measurementId: 'G-Q6HY8RZKM3',
+  },
 };
 
 /*
